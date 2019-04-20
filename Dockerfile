@@ -1,8 +1,10 @@
 FROM jenkins/jnlp-slave:alpine
 
+# add docker
 USER root
 RUN apk add docker
 
-USER jenkins
+# add script
+ADD jenkins-slave.sh /
 
-ENTRYPOINT ["jenkins-slave"]
+ENTRYPOINT ["/jenkins-slave.sh"]
