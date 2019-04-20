@@ -1,8 +1,8 @@
 # Jenkins JNLP Slave 
 
-[![Docker Stars](https://img.shields.io/docker/stars/joao29a/jnlp-slave-alpine-docker.svg)](https://hub.docker.com/r/joao29a/jnlp-slave-alpine-docker/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/joao29a/jnlp-slave-alpine-docker.svg)](https://hub.docker.com/r/joao29a/jnlp-slave-alpine-docker/)
-[![Docker Automated build](https://img.shields.io/docker/automated/joao29a/jnlp-slave-alpine-docker.svg)](https://hub.docker.com/r/joao29a/jnlp-slave-alpine-docker/)
+[![Docker Stars](https://img.shields.io/docker/stars/rogaha/jnlp-slave-docker.svg)](https://hub.docker.com/r/rogaha/jnlp-slave-docker/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/rogaha/jnlp-slave-docker.svg)](https://hub.docker.com/r/rogaha/jnlp-slave-docker/)
+[![Docker Automated build](https://img.shields.io/docker/automated/joao29a/jnlp-slave-alpine-docker.svg)](https://hub.docker.com/r/rogaha/jnlp-slave-docker/)
 
 This image is based on [jenkins/jnlp-slave](https://hub.docker.com/r/jenkins/jnlp-slave/) running alpine with docker binaries.
 
@@ -13,7 +13,7 @@ To run a Docker container and be allowed to use docker binaries, you have to bin
 ```sh
 docker run \
     -v /var/run/docker.sock:/var/run/docker.sock \
-    joao29a/jnlp-slave-alpine-docker -url http://jenkins-server:port <secret> <agent name>
+    rogaha/jnlp-slave-docker -url http://jenkins-server:port <secret> <agent name>
 ```
 If you don't have enough permission, run:
 
@@ -21,7 +21,7 @@ If you don't have enough permission, run:
 docker run \
     -u root \
     -v /var/run/docker.sock:/var/run/docker.sock \
-    joao29a/jnlp-slave-alpine-docker -url http://jenkins-server:port <secret> <agent name>
+    rogaha/jnlp-slave-docker -url http://jenkins-server:port <secret> <agent name>
 ```
 
 For a more detailed documentation, access [jenkins/jnlp-slave](https://hub.docker.com/r/jenkins/jnlp-slave/)
